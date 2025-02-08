@@ -3,14 +3,13 @@ import {
   SafeAreaView,
   Text,
 } from 'react-native';
+import { Router } from './src/routes/Router';
 
 
 function App(): React.JSX.Element {
   
   return (
-    <SafeAreaView>
-      <Text>Meu app com Auth</Text>
-    </SafeAreaView>
+    <Router/>
   );
 }
 
