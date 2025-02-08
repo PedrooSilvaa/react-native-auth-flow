@@ -7,7 +7,7 @@ import { AuthStack } from './AuthStack';
 const Stack = createNativeStackNavigator();
 
 export function Router(){
-    const auth = false;
+    const auth = true;
     return(
         <NavigationContainer>
             {auth ? <AppStack/> : <AuthStack/>}
