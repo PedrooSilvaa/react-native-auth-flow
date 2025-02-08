@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import { MyTextInput } from "../components/MyTextInput";
 import { MyButton } from "../components/MyButton";
 import { styles } from "./styles";
+import { useAuth } from "../context/Auth";
 
 
 export function SignInScreen() {
+    const { signIn } = useAuth()
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     return(
@@ -18,7 +20,10 @@ export function SignInScreen() {
             value={password} 
             onChangeText={setPassword}
             />
-            <MyButton title="Entrar no App"/>
+            <MyButton 
+            title="Entrar no App"
+            onPress={() => signIn(email, password)}
+            />
         </View>
     )
 }

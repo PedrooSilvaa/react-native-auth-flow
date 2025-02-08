@@ -17,7 +17,7 @@ export function HomeScreen() {
         onPress={() => navigation.navigate('Settings' as never)}
       />
       <Text>
-        by <Text style={styles.coffText}>Coffstack</Text>
+        by <Text style={styles.coffText}>Pedro Ferreira</Text>
       </Text>
     </View>
     )
